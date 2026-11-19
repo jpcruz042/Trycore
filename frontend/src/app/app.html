@@ -1,0 +1,655 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+  :host {
+    --bright-blue: oklch(51.01% 0.274 263.83);
+    --electric-violet: oklch(53.18% 0.28 296.97);
+    --french-violet: oklch(47.66% 0.246 305.88);
+    --vivid-pink: oklch(69.02% 0.277 332.77);
+    --hot-red: oklch(61.42% 0.238 15.34);
+    --orange-red: oklch(63.32% 0.24 31.68);
+
+    --gray-900: oklch(19.37% 0.006 300.98);
+    --gray-700: oklch(36.98% 0.014 302.71);
+    --gray-400: oklch(70.9% 0.015 304.04);
+
+    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+      180deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+      90deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --pill-accent: var(--bright-blue);
+
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-size: 3.125rem;
+    color: var(--gray-900);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+
+  p {
+    margin: 0;
+    color: var(--gray-700);
+  }
+
+  main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+  }
+
+  .angular-logo {
+    max-width: 9.2rem;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .content h1 {
+    margin-top: 1.75rem;
+  }
+
+  .content p {
+    margin-top: 1.5rem;
+  }
+
+  .divider {
+    width: 1px;
+    background: var(--red-to-pink-to-purple-vertical-gradient);
+    margin-inline: 0.5rem;
+  }
+
+  .pill-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .pill {
+    display: flex;
+    align-items: center;
+    --pill-accent: var(--bright-blue);
+    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+    color: var(--pill-accent);
+    padding-inline: 0.75rem;
+    padding-block: 0.375rem;
+    border-radius: 2.75rem;
+    border: 0;
+    transition: background 0.3s ease;
+    font-family: var(--inter-font);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.00875rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .pill:hover {
+    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+  }
+
+  .pill-group .pill:nth-child(6n + 1) {
+    --pill-accent: var(--bright-blue);
+  }
+  .pill-group .pill:nth-child(6n + 2) {
+    --pill-accent: var(--electric-violet);
+  }
+  .pill-group .pill:nth-child(6n + 3) {
+    --pill-accent: var(--french-violet);
+  }
+
+  .pill-group .pill:nth-child(6n + 4),
+  .pill-group .pill:nth-child(6n + 5),
+  .pill-group .pill:nth-child(6n + 6) {
+    --pill-accent: var(--hot-red);
+  }
+
+  .pill-group svg {
+    margin-inline-start: 0.25rem;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.73rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-links path {
+    transition: fill 0.3s ease;
+    fill: var(--gray-400);
+  }
+
+  .social-links a:hover svg path {
+    fill: var(--gray-900);
+  }
+
+  @media screen and (max-width: 650px) {
+    .content {
+      flex-direction: column;
+      width: max-content;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: var(--red-to-pink-to-purple-horizontal-gradient);
+      margin-block: 1.5rem;
+    }
+  }
+
+  .app-shell {
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .sidebar {
+    background: var(--gray-900);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    width: 250px;
+  }
+
+  .brand {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .brand-mark {
+    background: var(--bright-blue);
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .sidebar-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .project-list {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+  }
+
+  .project-item {
+    background: transparent;
+    border: 0;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  .project-item.active {
+    background: var(--bright-blue);
+  }
+
+  .project-dot {
+    background: currentColor;
+    border-radius: 50%;
+    height: 0.5rem;
+    width: 0.5rem;
+  }
+
+  .empty-projects {
+    color: var(--gray-400);
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .sidebar-footer {
+    align-items: center;
+    border-top: 1px solid var(--gray-700);
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  .avatar {
+    background: var(--bright-blue);
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .topbar {
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid var(--gray-200);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+  }
+
+  .eyebrow {
+    color: var(--gray-500);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .topbar-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .welcome-panel {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .welcome-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .kpi-card {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .kpi-label {
+    color: var(--gray-500);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .status-pill {
+    align-items: center;
+    border-radius: 1rem;
+    display: inline-flex;
+    font-size: 0.75rem;
+    height: 1.5rem;
+    justify-content: center;
+    padding-inline: 0.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .text-negative {
+    color: #e63946;
+  }
+
+  .form-panel {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-field {
+    grid-column: span 2;
+  }
+
+  .panel {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .panel-heading {
+    align-items: center;
+    background: var(--gray-100);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .close-button {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0;
+    position: relative;
+    top: -2px;
+  }
+
+  .table-panel {
+    overflow: hidden;
+  }
+
+  .table-wrap {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  th {
+    background: var(--gray-100);
+    color: var(--gray-900);
+    font-weight: 500;
+  }
+
+  tr:nth-child(even) {
+    background: var(--gray-50);
+  }
+
+  .chart-panel {
+    overflow: hidden;
+  }
+
+  .chart {
+    padding: 1rem;
+  }
+
+  .chart-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .bars {
+    display: flex;
+    gap: 0.5rem;
+    flex-grow: 1;
+  }
+
+  .bar {
+    border-radius: 0.25rem;
+    height: 1.5rem;
+    position: relative;
+  }
+
+  .bar span {
+    color: white;
+    font-size: 0.75rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 0;
+  }
+
+  .danger {
+    color: #e63946;
+  }
+</style>
+
+<main class="app-shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">T</div>
+      <div>
+        <strong>Trycore</strong>
+        <span>Project control</span>
+      </div>
+    </div>
+
+    <div class="sidebar-heading">
+      <span>PROYECTOS</span>
+      <button class="icon-button" type="button" (click)="showProjectForm.set(true)" aria-label="Crear proyecto">+</button>
+    </div>
+
+    <nav class="project-list">
+      @for (project of projects(); track project.id) {
+        <button
+          type="button"
+          class="project-item"
+          [class.active]="selected()?.id === project.id"
+          (click)="selectProject(project.id)">
+          <span class="project-dot"></span>
+          <span>
+            <strong>{{ project.name }}</strong>
+            <small>{{ project.cut_off_date || 'Sin fecha de corte' }}</small>
+          </span>
+        </button>
+      }
+      @empty {
+        <div class="empty-projects">Aún no hay proyectos</div>
+      }
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="avatar">JD</div>
+      <div>
+        <strong>Project Lead</strong>
+        <small>Espacio de trabajo</small>
+      </div>
+    </div>
+  </aside>
+
+  <section class="workspace">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">TABLERO EVM</p>
+        <h1>{{ selected()?.name || 'Control de proyectos' }}</h1>
+      </div>
+      <div class="topbar-actions">
+        <button class="secondary-button" type="button" (click)="loadProjects()">Actualizar</button>
+        <button class="primary-button" type="button" (click)="startActivity()" [disabled]="!selected()">Nueva actividad</button>
+      </div>
+    </header>
+
+    @if (error()) {
+      <div class="alert">{{ error() }}</div>
+    }
+
+    @if (showProjectForm()) {
+      <section class="panel form-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">NUEVO PROYECTO</p>
+            <h2>Crear proyecto</h2>
+          </div>
+          <button class="close-button" type="button" (click)="showProjectForm.set(false)">×</button>
+        </div>
+        <div class="form-grid">
+          <label>Nombre<input [(ngModel)]="projectDraft.name" placeholder="Nombre del proyecto"></label>
+          <label>Fecha de corte<input type="date" [(ngModel)]="projectDraft.cut_off_date"></label>
+          <label class="full-field">Descripción<textarea [(ngModel)]="projectDraft.description" rows="3" placeholder="Descripción breve"></textarea></label>
+        </div>
+        <div class="form-actions">
+          <button class="secondary-button" type="button" (click)="showProjectForm.set(false)">Cancelar</button>
+          <button class="primary-button" type="button" (click)="createProject()">Crear proyecto</button>
+        </div>
+      </section>
+    }
+
+    @if (selected(); as project) {
+      <section class="kpi-grid">
+        <article class="kpi-card">
+          <div class="kpi-label"><span>Índice de costo</span><b>CPI</b></div>
+          <strong>{{ project.indicators.cpi || '—' }}</strong>
+          <span class="status-pill" [ngClass]="statusClass(project.indicators.cpi_status)">{{ statusLabel(project.indicators.cpi_status, 'cost') }}</span>
+        </article>
+        <article class="kpi-card">
+          <div class="kpi-label"><span>Índice de cronograma</span><b>SPI</b></div>
+          <strong>{{ project.indicators.spi || '—' }}</strong>
+          <span class="status-pill" [ngClass]="statusClass(project.indicators.spi_status)">{{ statusLabel(project.indicators.spi_status, 'time') }}</span>
+        </article>
+        <article class="kpi-card">
+          <div class="kpi-label"><span>Valor ganado</span><b>EV</b></div>
+          <strong>{{ money(project.indicators.ev) }}</strong>
+          <small>del valor planificado</small>
+        </article>
+        <article class="kpi-card">
+          <div class="kpi-label"><span>Variación de costo</span><b>CV</b></div>
+          <strong [class.text-negative]="number(project.indicators.cv) < 0">{{ money(project.indicators.cv) }}</strong>
+          <small>EV − AC</small>
+        </article>
+      </section>
+
+      @if (showActivityForm()) {
+        <section class="panel form-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">{{ editingActivityId ? 'EDITAR ACTIVIDAD' : 'NUEVA ACTIVIDAD' }}</p>
+              <h2>{{ editingActivityId ? 'Actualizar actividad' : 'Agregar actividad' }}</h2>
+            </div>
+            <button class="close-button" type="button" (click)="showActivityForm.set(false)">×</button>
+          </div>
+          <div class="form-grid activity-form-grid">
+            <label>Nombre<input [(ngModel)]="activityDraft.name" placeholder="Ej. Desarrollo backend"></label>
+            <label>BAC<input type="number" min="0" [(ngModel)]="activityDraft.bac"></label>
+            <label>Avance planificado (%)<input type="number" min="0" max="100" [(ngModel)]="activityDraft.planned_progress"></label>
+            <label>Avance real (%)<input type="number" min="0" max="100" [(ngModel)]="activityDraft.actual_progress"></label>
+            <label>Costo real (AC)<input type="number" min="0" [(ngModel)]="activityDraft.actual_cost"></label>
+          </div>
+          <div class="form-actions">
+            <button class="secondary-button" type="button" (click)="showActivityForm.set(false)">Cancelar</button>
+            <button class="primary-button" type="button" (click)="saveActivity()">Guardar actividad</button>
+          </div>
+        </section>
+      }
+
+      <section class="content-grid">
+        <article class="panel table-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">SEGUIMIENTO</p>
+              <h2>Actividades</h2>
+            </div>
+            <button class="text-button danger" type="button" (click)="deleteProject()">Eliminar proyecto</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Actividad</th><th>BAC</th><th>PV</th><th>EV</th><th>AC</th><th>CPI</th><th>SPI</th><th></th></tr></thead>
+              <tbody>
+                @for (activity of project.activities; track activity.id) {
+                  <tr>
+                    <td><strong>{{ activity.name }}</strong><small>{{ activity.actual_progress }}% completado</small></td>
+                    <td>{{ money(activity.bac) }}</td>
+                    <td>{{ money(activity.pv) }}</td>
+                    <td>{{ money(activity.ev) }}</td>
+                    <td>{{ money(activity.actual_cost) }}</td>
+                    <td><span class="status-pill" [ngClass]="statusClass(activity.cpi_status || '')">{{ activity.cpi || '—' }}</span></td>
+                    <td><span class="status-pill" [ngClass]="statusClass(activity.spi_status || '')">{{ activity.spi || '—' }}</span></td>
+                    <td class="row-actions"><button type="button" (click)="editActivity(activity)">Editar</button><button type="button" class="delete" (click)="deleteActivity(activity)">Eliminar</button></td>
+                  </tr>
+                }
+                @empty {
+                  <tr><td colspan="8" class="empty-row">Agrega actividades para iniciar el análisis EVM.</td></tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="panel chart-panel">
+          <div class="panel-heading">
+            <div><p class="eyebrow">COMPARACIÓN</p><h2>PV / EV / AC</h2></div>
+          </div>
+          <div class="chart">
+            @for (activity of project.activities; track activity.id) {
+              <div class="chart-row">
+                <div class="chart-label">{{ activity.name }}</div>
+                <div class="bars">
+                  <div class="bar pv" [style.width.%]="barWidth(activity.pv)"><span>PV {{ money(activity.pv) }}</span></div>
+                  <div class="bar ev" [style.width.%]="barWidth(activity.ev)"><span>EV {{ money(activity.ev) }}</span></div>
+                  <div class="bar ac" [style.width.%]="barWidth(activity.actual_cost)"><span>AC {{ money(activity.actual_cost) }}</span></div>
+                </div>
+              </div>
+            }
+            @empty {
+              <div class="empty-row">Sin datos para graficar.</div>
+            }
+          </div>
+        </article>
+      </section>
+    } @else if (!loading()) {
+      <section class="welcome-panel">
+        <div class="welcome-icon">◎</div>
+        <h2>Comienza tu control EVM</h2>
+        <p>Crea un proyecto y registra sus actividades para visualizar cronograma y presupuesto.</p>
+        <button class="primary-button" type="button" (click)="showProjectForm.set(true)">Crear primer proyecto</button>
+      </section>
+    }
+  </section>
+</main>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<router-outlet />

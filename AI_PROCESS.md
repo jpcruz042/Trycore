@@ -26,6 +26,10 @@ Este archivo documentará el proceso completo de desarrollo asistido por IA.
 
 `Perfecto, ahora crea los endpoint necesarios para todas las transacciones que requiere el proceso. Despues de crearlas realizar peticiones para probar cada una de las trnasacciones creadas`
 
+### 5
+
+`Excelente, ahora implementemos el front para poder interactuar con todo. Quiero un diseñor ligero pero contemporaneo, algo amigable y con colores profesionales y agradables`
+
 ## Decisiones técnicas iniciales
 
 - Usar PostgreSQL 16 dentro de Docker para garantizar un entorno reproducible.

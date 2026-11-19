@@ -47,6 +47,23 @@ docker compose up -d --build backend
 - Salud: `http://localhost:8001/health`
 - Swagger: `http://localhost:8001/docs`
 
+## Ejecutar el frontend
+
+```powershell
+docker compose up -d --build frontend
+```
+
+- Aplicación: `http://localhost:4200`
+- Salud del frontend: `http://localhost:4200/health`
+- API: `http://localhost:8001`
+- Swagger: `http://localhost:8001/docs`
+
+Para iniciar todo el stack:
+
+```powershell
+docker compose up -d --build
+```
+
 ## Detener el entorno
 
 ```powershell
