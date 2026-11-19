@@ -22,6 +22,10 @@ Este archivo documentará el proceso completo de desarrollo asistido por IA.
 
 `Perfecto, ahora necesitamos crear el contenedor para el back. Antes de iniciar con la creación de la API y los EndPoint necesitamos crear el contenedor del back`
 
+### 4
+
+`Perfecto, ahora crea los endpoint necesarios para todas las transacciones que requiere el proceso. Despues de crearlas realizar peticiones para probar cada una de las trnasacciones creadas`
+
 ## Decisiones técnicas iniciales
 
 - Usar PostgreSQL 16 dentro de Docker para garantizar un entorno reproducible.
