@@ -37,6 +37,16 @@ docker compose exec postgres psql -U trycore -d trycore -c "\dt"
 
 La base quedará disponible en `localhost:5433` para evitar conflictos con otros contenedores PostgreSQL.
 
+## Ejecutar el backend
+
+```powershell
+docker compose up -d --build backend
+```
+
+- API: `http://localhost:8001`
+- Salud: `http://localhost:8001/health`
+- Swagger: `http://localhost:8001/docs`
+
 ## Detener el entorno
 
 ```powershell
@@ -51,7 +61,7 @@ docker compose down -v
 
 ## Próximos pasos
 
-1. Implementar el backend FastAPI.
+1. Implementar los modelos y endpoints FastAPI.
 2. Implementar el frontend Angular.
 3. Completar las pruebas unitarias e integración.
 4. Documentar las decisiones de IA y EVM en `AI_PROCESS.md`.

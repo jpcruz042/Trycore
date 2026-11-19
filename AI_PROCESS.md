@@ -18,11 +18,16 @@ Este archivo documentará el proceso completo de desarrollo asistido por IA.
 
 `Perfecto, iniciemos entonces. Propongo crear primero la base de datos. Realiza los procedimientos necesarios para crear el contenedor, las tablas necesarias y las carpetas y archivos obligatorios para que le proyecto funcione`
 
+### 3
+
+`Perfecto, ahora necesitamos crear el contenedor para el back. Antes de iniciar con la creación de la API y los EndPoint necesitamos crear el contenedor del back`
+
 ## Decisiones técnicas iniciales
 
 - Usar PostgreSQL 16 dentro de Docker para garantizar un entorno reproducible.
 - Usar `NUMERIC(14, 2)` para dinero y `NUMERIC(5, 2)` para porcentajes, evitando cálculos con valores de punto flotante.
 - Exponer PostgreSQL en `localhost:5433` porque el puerto `5432` ya está ocupado por otro contenedor local.
+- Exponer el backend en `localhost:8001` porque el puerto `8000` ya está ocupado por otro contenedor local.
 - Usar UUID como identificador para evitar revelar secuencias numéricas y facilitar integración futura.
 - Separar proyectos y actividades con eliminación en cascada.
 
