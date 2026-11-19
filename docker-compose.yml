@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: trycore-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-trycore}
+      POSTGRES_USER: ${POSTGRES_USER:-trycore}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-trycore_password}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - trycore-postgres-data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-trycore} -d ${POSTGRES_DB:-trycore}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  trycore-postgres-data:

@@ -1,0 +1,26 @@
+# Environment
+.env
+
+# Docker
+postgres-data/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Angular / Node.js
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+node_modules/
+
+# Editors
+.vscode/*.log
+
+# Operating systems
+Thumbs.db
+.DS_Store
